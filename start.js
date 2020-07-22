@@ -8,8 +8,8 @@ const CollectorProtocolNode = require('@opentelemetry/exporter-collector');
 const collectorOptions = {
   serviceName: 'basic-service',
   protocolNode: CollectorProtocolNode.HTTP_JSON,
-  url: 'http://0.0.0.0:55680',
-  // url: 'http://localhost:55680/v1/trace' // tried with both urls.
+  // url: 'http://0.0.0.0:55680', // tried this as well.
+  url: 'http://localhost:55680/v1/trace' , 
 };
 
 const exporter = new CollectorExporter(collectorOptions);
